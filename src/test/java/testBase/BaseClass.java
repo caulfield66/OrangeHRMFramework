@@ -2,7 +2,9 @@ package testBase;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -16,13 +18,24 @@ public class BaseClass {
 
 
     @BeforeClass
-    public void setup() throws IOException {
+    @Parameters({"os", "browser"})
+    public void setup(String os, String browser) throws IOException {
 
         FileReader propertiesFile = new FileReader("./src/test/resources/config.properties");
         p = new Properties();
         p.load(propertiesFile);
 
-        driver = new ChromeDriver();
+        switch (browser.toLowerCase()){
+            case "chrome":
+                driver = new ChromeDriver();
+                break;
+            case "safari":
+                driver = new SafariDriver();
+            default:
+                System.out.println("No such browser");
+                return;
+        }
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         driver.get(p.getProperty("appUrl"));

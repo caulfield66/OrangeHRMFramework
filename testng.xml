@@ -2,12 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test name="/Users/ruslan/Desktop/SDET/Frameworks/OrangeHRM_Framework/src/test/java/testCases/LoginTest.java">
+        <parameter name="os" value="Windows"></parameter>
+        <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="testCases.LoginTest">
-                <methods>
-                    <include name="verify_login"/>
-                </methods>
-            </class>
+<!--            <class name="testCases.TC_001_LoginTest"/>-->
+            <class name="testCases.TC_002_UpdateMyInfo"/>
         </classes>
     </test>
 </suite>
