@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="/Users/ruslan/Desktop/SDET/Frameworks/OrangeHRM_Framework/src/test/java/testCases/LoginTest.java">
+        <classes>
+            <class name="testCases.LoginTest">
+                <methods>
+                    <include name="verify_login"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
