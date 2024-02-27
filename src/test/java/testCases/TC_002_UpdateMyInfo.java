@@ -27,7 +27,12 @@ public class TC_002_UpdateMyInfo extends BaseClass {
             PersonalDetailsPage pdp = new PersonalDetailsPage(driver);
             pdp.setFirstName("Test");
             pdp.setLastName("Tester");
+            pdp.setDriverLicense("K1209875612");
+            pdp.setDlExpirationDate("2024-01-05");
+            pdp.setNationality("Armenian");
+
             pdp.clickSave();
+
 
             boolean actualSuccessMsg = pdp.isSuccessMsgAppears();
             Assert.assertEquals(actualSuccessMsg, true);

@@ -3,6 +3,7 @@ package testBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
@@ -42,5 +43,11 @@ public class BaseClass {
 
 
     }
+
+
+//    @AfterClass
+//    public void teardown(){
+//        driver.close();
+//    }
 
 }
