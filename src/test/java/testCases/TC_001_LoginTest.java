@@ -20,6 +20,7 @@ public class TC_001_LoginTest extends BaseClass {
             DashboardPage dp = new DashboardPage(driver);
             boolean actualMsg = dp.isDashboardExists();
 
+
             Assert.assertEquals(actualMsg, true);
 
         }

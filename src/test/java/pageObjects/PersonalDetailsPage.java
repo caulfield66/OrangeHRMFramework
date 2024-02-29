@@ -67,7 +67,6 @@ public class PersonalDetailsPage extends BasePage {
     public void setNationality(String nationality){
         txtNationality.click();
         for(WebElement option:lstNationalityOptions){
-            System.out.println(option.getText());
             if(option.getText().equals(nationality)){
                 option.click();
                 break;

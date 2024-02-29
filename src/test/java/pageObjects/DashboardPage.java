@@ -15,6 +15,13 @@ public class DashboardPage extends BasePage{
     @FindBy(xpath = "//span[normalize-space()='My Info']")
     WebElement lnkMyInfo;
 
+    @FindBy(xpath="//span[@class='oxd-userdropdown-tab']")
+    WebElement btnMenu;
+
+    @FindBy(xpath="//a[normalize-space()='Logout']")
+    WebElement lnkLogOut;
+
+
     public boolean isDashboardExists(){
         try{
             return msgHeading.isDisplayed();
@@ -26,6 +33,11 @@ public class DashboardPage extends BasePage{
 
     public void clickMyInfo(){
         lnkMyInfo.click();
+    }
+
+    public void clickLogOut(){
+        btnMenu.click();
+        lnkLogOut.click();
     }
 
 }
