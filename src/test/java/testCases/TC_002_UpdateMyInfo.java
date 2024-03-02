@@ -10,7 +10,7 @@ import testBase.BaseClass;
 
 public class TC_002_UpdateMyInfo extends BaseClass {
 
-    @Test
+    @Test(groups = {"master","regression"})
     public void update_personal_details(){
         try {
             LoginPage lp = new LoginPage(driver);

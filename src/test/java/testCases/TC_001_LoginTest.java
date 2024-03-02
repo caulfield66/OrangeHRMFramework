@@ -8,7 +8,7 @@ import testBase.BaseClass;
 
 public class TC_001_LoginTest extends BaseClass {
 
-    @Test
+    @Test(groups = {"master", "sanity"})
     public void verify_login(){
 
         try {

@@ -18,7 +18,7 @@ public class BaseClass {
     public Properties p;
 
 
-    @BeforeClass
+    @BeforeClass(groups = {"master", "sanity", "regression"})
     @Parameters({"os", "browser"})
     public void setup(String os, String browser) throws IOException {
 
@@ -45,7 +45,7 @@ public class BaseClass {
     }
 
 
-    @AfterClass
+    @AfterClass(groups = {"master", "sanity", "regression"})
     public void teardown(){
         driver.close();
     }

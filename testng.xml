@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
+    <listeners>
+        <listener class-name="utilities.ExtentReportManager"/>
+    </listeners>
     <test name="/Users/ruslan/Desktop/SDET/Frameworks/OrangeHRM_Framework/src/test/java/testCases/LoginTest.java">
         <parameter name="os" value="Windows"></parameter>
         <parameter name="browser" value="chrome"></parameter>
+        <groups>
+            <run>
+                <include name="sanity" />
+<!--                <include name="regression" />-->
+<!--                <include name="master"/>-->
+            </run>
+        </groups>
         <classes>
             <class name="testCases.TC_001_LoginTest"/>
             <class name="testCases.TC_002_UpdateMyInfo"/>
-            <class name="testCases.TC_003_LoginDDT"/>
+<!--            <class name="testCases.TC_003_LoginDDT"/>-->
         </classes>
     </test>
 </suite>
